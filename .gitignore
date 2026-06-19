@@ -1,0 +1,22 @@
+# JetBrains IDE
+.idea/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js (если потом появится)
+node_modules/
+
+# Логи
+*.log
+
+# Переменные окружения
+.env
+.env.local
+Визитка.png
+Визитка.png
+PhotoFo_TapLink.jpg

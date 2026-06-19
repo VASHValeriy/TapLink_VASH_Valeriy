@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+
+  line-height: 1.6;
+  min-height: 100vh;
+
+
+  background-image: url("./VASH.png");
+  background-size: cover;
+  background-position: center 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  gap: clamp(15px, 1vw, 80px);
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Header стили */
+header {
+  width: 60%;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(24px, 2.5vw, 48px);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.donation-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.social-media-h1 {
+  font-size: clamp(24px, 2vw, 48px);
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: clamp(14px, 1.2vw, 20px);
+  color: #ccc;
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+.gradient-line {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+.gradient-line-2 {
+  width: 60%;
+  margin-bottom: 40px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+}
+
+/* Ссылки */
+.links {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+  gap: clamp(15px, 3vw, 80px);
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  
+}
+
+.postscript {
+  font-size: clamp(14px, 1vw, 48px);
+
+  color: #d6d6d6;
+  
+  color: var(--muted);
+
+  margin-top: 5px;
+}
+
+.link-button {
+  display: block;
+  padding: 15px 20px;
+  font-size: clamp(24px, 1.5vw, 80px);
+
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 16px;
+
+  transition: 0.3s;
+}
+
+.link-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 20px rgba(15, 138, 95, 0.2),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.link-button:hover .link {
+  color: #000;
+}
+
+.link-button:hover .postscript {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  color: #666;
+  border-top: 1px solid #333;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .link-button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .links {
+    gap: 10px;
+  }
+
+  .link-button {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
