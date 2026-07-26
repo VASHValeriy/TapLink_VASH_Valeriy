@@ -52,7 +52,6 @@ main {
 }
 /* Header стили */
 header {
-  width: 60%;
   text-align: center;
 }
 
@@ -62,13 +61,18 @@ h1 {
   letter-spacing: 1px;
 }
 
+.sections {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.projects-section,
 .donation-section {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
 }
 
 .social-media-h1 {
@@ -124,7 +128,7 @@ h1 {
 
 .link-button {
   display: block;
-  padding: 15px 20px;
+  padding: 25px 20px;
   font-size: clamp(24px, 1.5vw, 80px);
 
   color: #fff;
@@ -174,6 +178,12 @@ footer {
   border-top: 1px solid #333;
 }
 
+@media (max-width: 1300px) {
+  .links{
+    width: 75%;
+  }
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .container {
@@ -190,7 +200,6 @@ footer {
   }
 
   .link-button {
-    padding: 12px 15px;
     font-size: 14px;
   }
 }
@@ -218,7 +227,6 @@ footer {
   }
 
   .link-button {
-    padding: 10px 12px;
     font-size: 13px;
   }
 }
