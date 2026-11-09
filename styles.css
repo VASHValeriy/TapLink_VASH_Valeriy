@@ -117,15 +117,17 @@ h1 {
 .links {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   width: 60%;
   gap: clamp(15px, 3vw, 80px);
 }
 
 .link {
+  display: block;
+  width: 100%;
   text-decoration: none;
   color: #fff;
-  
 }
 
 .postscript {
@@ -196,6 +198,40 @@ footer {
   }
 }
 
+/* Social Media Icons */
+.link-content {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  column-gap: 36px;
+
+  width: 420px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  transform: translateX(55px);
+}
+
+.social-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  justify-self: center;
+}
+
+.link-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+.link-text span {
+  font-size: inherit;
+  color: inherit;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .container {
@@ -214,6 +250,11 @@ footer {
   .link-button {
     font-size: 14px;
   }
+
+  .link-content {
+    transform: translateX(50px);
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -230,6 +271,10 @@ footer {
     font-size: 18px;
   }
 
+  p.postscript {
+    font-size: 10px;
+  }
+  
   .description {
     font-size: 12px;
   }
@@ -240,5 +285,9 @@ footer {
 
   .link-button {
     font-size: 13px;
+  }
+
+  .link-content {
+    transform: translateX(20px);
   }
 }
